@@ -1,0 +1,29 @@
+<% include ./partials/btparts %>
+
+<div class="container">
+    <div class="">
+        <div class="border mb-5 mt-5">
+            <div class="row">
+                <div class="col-md-12 image">
+                    <img class="img-rounded" src="<%=event.img%>">
+                </div>
+            </div>
+            <div class="row mt-5 ">
+                <div class="content">
+                    <div class="title">
+                        <h2><%=event.title%></h2>
+                    </div>
+                    <div class="description justify-content-end">
+                        <p><%-event.content%></p>
+                    </div>
+                    <div class="extra">
+                        <span><%=event.date.toDateString()%></span>
+                    </div>
+                    <a class="btn btn-lg btn-info mt-3" href="/#portfolio">Powrót</a>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ./partials/footer %>

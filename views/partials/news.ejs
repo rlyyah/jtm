@@ -1,0 +1,40 @@
+<%include ./btparts %>
+
+ <!-- Portfolio Grid -->
+    <section class="bg-light" id="portfolio">
+      <div class="container">
+      	<div class="row">
+      		<div class="col-lg-12">
+      			<h2 id="scroll-here" class="section-heading text-center">Aktualności</h2>
+      		</div>
+      	</div>
+      	<div class="mt-5">
+      	    <% for(var i = event.length-1; i>0; i--){%>
+      	 <div class="row mt-5">
+          	    <div class="col-md-12">
+          	        <div class="event thumbnail">
+          	            <div class="col-md-4 image float-left">
+          	                <img class="img-responsive" width="100%" src="<%=event[i].img%>">
+          	            </div>
+          	            <div class="col-md-8 contentv float-left">
+          	                <a class="title lead" href="/news/<%= event[i]._id%>"><%=event[i].title%></a>
+          	                <p class="date"><%=event[i].date.toDateString()%></p>
+          	                <p class="description"><%-event[i].content.substring(0,250)%>...</p>
+          	                <a class="btn btn-md btn-info float-right" href="/news/<%= event[i]._id%>">Czytaj więcej</a>
+          	            </div>
+          	        </div>
+          	        
+          	    </div>
+      	    </div>
+      	 <% }%>
+      	    <a class="btn btn-lg btn-success mt-5 float-right" href="/#portfolio">Powrót</a>
+      	</div>
+      	
+      	
+   
+        </div>
+    </section>
+
+
+
+<%include ./footer %>

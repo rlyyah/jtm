@@ -1,0 +1,7 @@
+<% include ./partials/btparts %>
+<h2>CZY NA PEWNO CHCESZ USUNĄĆ <%=event.title%>?</h2>
+
+<form action="/news/<%=event._id%>?_method=DELETE" method="POST">
+    <button class="btn btn-lg btn-danger">TAK!!!</button>
+</form>
+<a class="btn btn-lg btn-secondary" href="/news/<%=event._id%>">NIE!!!</a>

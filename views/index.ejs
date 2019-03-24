@@ -1,0 +1,185 @@
+<% include ./partials/header %>
+<!-- ==========================================BRAINDEAD COPYPASTA========================================================================= -->
+
+<!-- Services -->
+    <section id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Czym się zajmujemy</h2>
+            <h3 class="section-subheading text-muted"></h3>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa  fa-square fa-stack-2x text-primary"></i>
+              <i class="fa fa-handshake-o fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Działaność Charytatywna</h4>
+            <p class="text-muted"><br>Od początku naszego istnienia aktywnie wspieramy Powiatową Placówkę Opiekuńczo-Wychowawczą
+w Jaworznie.</p>
+          </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-square fa-stack-2x text-primary"></i>
+              <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Projekty innowacyjne i konkursy tematyczne</h4>
+            <p class="text-muted">Pragniemy aby nasze miasto wciąż prężnie się rozwijało i wprowadzało w życie coraz to
+nowocześniejsze rozwiązania technologicznie. Unia Europejska oraz Jaworznicki Budżet Obywatelski
+to tylko niektórzy adresaci naszych innowacyjnych projektów. Propagowanie kultury poprzez
+konkursy, koncerty czy wernisaże to kolejna istotna dla nas sprawa. Muzycy, fotografowie, graficy i
+inni artyści znajdą u nas coś dla siebie.
+</p>
+          </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-square fa-stack-2x text-primary"></i>
+              <i class="fa fa-users fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Organizacja Wydarzeń Kulturalnych
+</h4>
+            <p class="text-muted">Naszą wizytówką jest organizacja corocznego Koncertu Charytatywnego, dzięki któremu dajemy
+młodym adeptom muzyki szanse zaistnienia na dużej scenie a podopiecznym Domu Dziecka środki
+finansowe na wakacje.</p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="bg-light" id="portfolio">
+      <div class="container">
+      	<div class="row">
+      		<div class="col-lg-12">
+      			<h2 id="scroll-here" class="section-heading text-center">Aktualności</h2>
+      		</div>
+
+      	<div class="mt-5">
+      	    <% for(var i = event.length-1; i>0; i--){%>
+      	    <% if(i>event.length-4){%>
+          	     <div class="row mt-5">
+              	    <div class="col-md-12">
+              	        <div class="event thumbnail">
+              	            <div class="col-md-4 image float-left">
+              	                <img class="img-responsive" width="100%" src="<%=event[i].img%>">
+              	            </div>
+              	            <div class="col-md-8 contentv float-left">
+              	                <a class="title lead" href="/news/<%= event[i]._id%>"><%=event[i].title%></a>
+              	                <p class="date"><%=event[i].date.toDateString()%></p>
+              	                <p class="description"><%-event[i].content.substring(0,250)%>...</p>
+              	                <a class="btn btn-md btn-info float-right" href="/news/<%= event[i]._id%>">Czytaj więcej</a>
+              	            </div>
+              	        </div>
+              	        
+              	    </div>
+          	    </div>
+          	  <% }else{%>
+          	      <a class="btn btn-lg btn-success float-right mt-5" href="/news">Więcej aktualności</a>
+          	      
+          	  <% break;}%>  
+      	     <% }%>
+      	    
+      	    
+
+      	    
+      	    
+      	    
+      	</div>
+      	
+</div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+      	<h2 class="section-heading text-center">O Nas</h2>
+        
+        
+<h3>Kim jesteśmy</h3>
+        <p class="testujemy">Młodymi, kreatywnymi i pełnymi pozytywnej energii ludźmi, dla których działania, takie jak pomoc i
+wsparcie potrzebujących, czy rozwój są bardzo istotne.
+</p>
+<h3>Co nas wyróżnia</h3>
+</h3>
+       <p class="testujemy">
+       	Stawiamy na nowoczesność i innowacyjność. Nasi ludzie wywodzą się z różnych dziedzin, co pozwala
+nam na bycie wszechstronną organizacją. Nie istnieje dla nas stwierdzenie ,,nie da się”. Obieramy
+konkretne cele i skrupulatnie realizujemy je. Pomagamy i pamiętamy o tych, którzy mieli mniej
+szczęścia od nas. Wspomagamy tych, którzy swoją postawą i zaangażowaniem zasługują na wsparcie i
+dalszy rozwój. 
+       </p>
+<h3>Co u nas znajdziesz
+</h3>
+       <p class="testujemy">
+       	Świetnych ludzi i sympatyczną atmosferę. U nas będziesz mógł realizować swoje pomysły, a także
+wspierać inicjatywy podjęte przez pozostałych członków. Na zebraniach będziesz się świetnie bawił
+chyba, że jesteś sztywniakiem… w takim przypadku się chyba nie polubimy. 
+       </p>
+       <h3>Kto może być członkiem Stowarzyszenia</h3>
+       <p class="testujemy">Absolutnie każdy kto czuje się młody duchem, ma poczucie humoru i zapał do pracy. Masz dużo na
+głowie? Pracujesz bądź studiujesz i boisz się, że nie starczy ci czasu na bycie aktywnym członkiem?
+Nie martw się! Dzięki licznej ekipie spokojnie będziesz mógł dostosować czas, który poświęcisz na
+działanie w naszej organizacji.
+Masz dobre serce? Nie jest Ci obojętny los innych ludzi? Kochasz Jaworzno i chcesz mieć wpływ na
+jego wygląd oraz charakter? Skontaktuj się z nami i dołącz do nas!</p>
+      </div>
+
+      <h2 class="section-heading text-center mt-5">Partnerzy</h2>
+      <div class="container">
+      <div class="row mt-5">
+       <div class="col-md-3">
+         <img src="imgs/mojejaworzno468.gif" width="200px" class="img-middled img-thumbnail jtm">
+       </div>
+       <div class="col-md-3">
+         <img src="imgs/MRMjaworzno.jpg" width="200px" class="img-middled img-thumbnail">
+       </div>
+       <div class="col-md-3">
+         <img src="imgs/jaworznomojemiasto.jpg" width="200px" class="img-middled img-thumbnail">
+       </div>
+       <div class="col-md-3">
+         <img src="imgs/inair.jpg" width="200px" class="img-middled img-thumbnail">
+       </div>
+
+      </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="bg-light" id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Członkowie</h2>
+            <h3 class="section-subheading text-muted">Kliknij strzałke aby wyświetlić</h3>
+            <p>
+                <a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                </a>
+            </p>
+          </div>
+        </div>
+
+          <!--MEMBERS -->  
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            <div class="row">
+                <% member.forEach(function(mem){%>
+                  <div class="col-md-3 col-sm-6">
+                    <div class="team-member">
+                      <img class="mx-auto rounded-circle foteczky" src="<%=mem.img%>" alt="">
+                      <h4><%=mem.name%></h4>
+                    </div>
+                  </div>                
+                <% })%>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    
+<% include ./partials/footer %>

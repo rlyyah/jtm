@@ -1,0 +1,17 @@
+<% include ./partials/btparts %>
+<a href="/members/add" class="btn btn-lg btn-info">ADD NEW</a>
+<a href="/logout" class="btn btn-lg btn-secondary">logout</a>
+
+<div class="container">
+    <% member.forEach(function(mem){%>
+        <div class="col-md-3 col-sm-6 float-left">
+            <div class="team-member">
+                <img class="mx-auto rounded-circle" src="<%=mem.img%>" alt="">
+                <h4><%=mem.name%></h4>
+                <form action="/members/<%=mem._id%>?_method=DELETE" method="POST">
+                    <button class="btn btn-sm btn-danger">delete</button>
+                </form>
+            </div>
+        </div>     
+    <% })%>
+</div>
